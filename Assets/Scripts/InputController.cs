@@ -16,6 +16,8 @@ public class InputController : MonoBehaviour
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int cellPosition = graphController.tilemap.WorldToCell(mouseWorldPosition);
             Vector2Int graphPosition = new Vector2Int(cellPosition.x - graphController.gridLowerBound.x, cellPosition.y - graphController.gridLowerBound.y);
+
+            graphController.MoveCell(graphPosition);
         }
     }
 }
