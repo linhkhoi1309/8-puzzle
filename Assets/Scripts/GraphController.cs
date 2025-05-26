@@ -1,5 +1,3 @@
-using System.Numerics;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -185,5 +183,12 @@ public class GraphController : MonoBehaviour
             Ultility.Swap(ref currentState[graphPosition.x, graphPosition.y], ref currentState[blankPosition.x, blankPosition.y]);
             SetGraphState(currentState);
         }
+    }
+
+    public void ResetGraph()
+    {
+        currentState = (int[,])initalState.Clone();
+        RotateGraphClockWise(currentState, width);
+        SetGraphState(currentState);
     }
 }

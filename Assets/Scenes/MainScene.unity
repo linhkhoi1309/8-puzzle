@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomizeButton: {fileID: 335748501}
+  resetButton: {fileID: 1723614041}
 --- !u!1 &270615099
 GameObject:
   m_ObjectHideFlags: 0
